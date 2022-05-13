@@ -4,7 +4,10 @@ async function connectMetaMask(mtamaskbtn) {
 			method: "eth_requestAccounts",
 		});
 		sessionStorage.setItem("account", account);
-		window.open("/simplestorageDapp/contract.html", "_self");
+		window.open(
+			"https://gautam7-github.github.io/simplestorageDapp/contract.htmlhtml",
+			"_self"
+		);
 	}
 	if (window.ethereum) {
 		window.WEB3 = new Web3(window.ethereum);
@@ -15,7 +18,10 @@ async function connectMetaMask(mtamaskbtn) {
 	sessionStorage.setItem("account", account);
 	console.log(account);
 	mtamaskbtn.remove();
-	window.open("/simplestorageDapp/contract.html", "_self");
+	window.open(
+		"https://gautam7-github.github.io/simplestorageDapp/contract.html",
+		"_self"
+	);
 }
 window.onload = async function () {
 	const mtamaskbtn = document.getElementById("metamaskBtn");
