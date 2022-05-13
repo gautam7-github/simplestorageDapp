@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #003049;
+    color: #FBF5F3;
+    font-family: Helvetica, sans-serif;
+}
+
+div.parent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: space-evenly;
+    flex: content;
+    height: 100vh;
+}
+div.parent #metamaskBtn{
+    border: 2px solid #DE6C83;
+    border-radius: 12px;
+    padding: 4px;
+    width: 12rem;
+    text-align: center;
+    font-size: xx-large;
+}
+div.parent #metamaskBtn:hover{
+    transform: scale(1.1);
+    border-radius: 20px;
+}
+#metamaskLogo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+}
+
+div.parent img{
+    height: 18vh;
+}
