@@ -38,3 +38,6 @@ div.parent #metamaskBtn:hover{
 div.parent img{
     height: 18vh;
 }
+div.parent img:hover{
+    transform: scale(1.6);
+}

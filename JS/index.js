@@ -13,13 +13,16 @@ async function connectMetaMask(mtamaskbtn) {
 		window.WEB3 = new Web3(window.ethereum);
 		const accounts = await window.WEB3.eth.getAccounts();
 		const account = accounts[0];
-		const chainID = await window.WEB3.eth.getChainId();
-		if (chainID != 3) {
-			await ethereum.request({
-				method: "wallet_switchEthereumChain",
-				params: [{ chainId: "0x3" }],
-			});
-		}
+		await window.WEB3.eth.getChainId().then((val) => {
+			if (val != 3){
+
+				await ethereum.request({
+						method: "wallet_switchEthereumChain",
+						params: [{ chainId: "0x3" }],
+				});
+				
+			}
+		});
 		sessionStorage.setItem("account", account);
 		mtamaskbtn.remove();
 		window.open(
@@ -29,6 +32,9 @@ async function connectMetaMask(mtamaskbtn) {
 	}
 }
 window.onload = async function () {
+	if (typeof ethereum == undefined) {
+		alert("Install Metamask");
+	}
 	const mtamaskbtn = document.getElementById("metamaskBtn");
 	mtamaskbtn.addEventListener("click", () => {
 		connectMetaMask(mtamaskbtn);
