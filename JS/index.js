@@ -8,11 +8,9 @@ async function connectMetaMask(mtamaskbtn) {
 
 	let account;
 	await window.WEB3.eth.getAccounts().then(function (result) {
-		console.log(result);
 		account = result[0];
 	});
 	sessionStorage.setItem("account", account);
-	console.log(account);
 	let chainVal;
 	await window.WEB3.eth.getChainId().then((val) => {
 		chainVal = val;
@@ -25,8 +23,8 @@ async function connectMetaMask(mtamaskbtn) {
 	}
 	mtamaskbtn.remove();
 	window.open(
-		"../contract.html",
-		// "https://gautam7-github.github.io/simplestorageDapp/contract.html",
+		// "../contract.html",
+		"https://gautam7-github.github.io/simplestorageDapp/contract.html",
 		"_self"
 	);
 }
