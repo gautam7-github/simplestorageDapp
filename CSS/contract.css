@@ -43,6 +43,7 @@ input{
     border: 1px solid #DE6C83;
     font-size: x-large;
     padding: 5%;
+    width: 25vw;
     text-align: center;
     transform: scale(0.7);
 }
